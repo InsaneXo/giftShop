@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Static/style.css">
+    <link rel="stylesheet" href="Static/responsive.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>AI Curated</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: url(aibackground.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+    }
+
+    .container {
+        margin-top: 73px;
+
+    }
+
+    .Box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Boxtitle {
+        color: white;
+        text-align: center;
+        width: 55%;
+        margin-bottom: 13px;
+
+    }
+
+    .Boxtitle h1 {
+        font-size: 54px;
+        letter-spacing: 6px;
+
+    }
+
+    .Boxtitle h3 {
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 6px;
+    }
+
+    button {
+        width: 184px;
+        background-color: blue;
+        color: white;
+        height: 57px;
+        text-align: center;
+        border: 4px solid white;
+        border-radius: 33px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        justify-content: center;
+        gap: 5px;
+        color: white;
+    }
+
+    h2 {
+        font-weight: 300;
+        letter-spacing: 4px;
+        margin-bottom: 14px;
+    }
+
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        color: white;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+
+    input {
+        height: 51px;
+        width: 55vw;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 0 10px;
+    }
+
+    .giftBtn {
+        margin: 16px auto 16px auto;
+    }
+
+    .none2 {
+        display: none;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+        .Boxtitle h3 {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 4px;
+        }
+
+        .Boxtitle h1 {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-gift"></i>
+                <h1>Gift Shop</h1>
+            </div>
+            <div class="navItem">
+                <div class="navlist">
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="aiCurated.html"></a>
+                        <li>AI Curated</li></a>
+                        <li class="catagories">Catagories <i class="fa-solid fa-chevron-down"></i></li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+                <div class="navLogo">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bars hamburger"></i>
+                </div>
+                <div class="dropDown none">
+                </div>
+                <div class="navSide none2">
+                    <div class="navTitle">
+                        <h2>Menu</h2>
+                        <i class="fa-solid fa-xmark close" style="cursor: pointer; font-size: 26px;"></i>
+                    </div>
+                    <div class="navMenu ">
+                        <ul>
+                            <a href="index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="aiCurated.html">
+                                <li>AI Curated</li>
+                            </a>
+                            <a href="itemPage.html">
+                                <li>Catagories</li>
+                            </a>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="Box">
+                <div class="Boxtitle">
+                    <h1>AI Curated Gift Ideas</h1>
+                    <h3>Our AI-powered tool will guide you in choosing the Perfect gift when you're
+                        unsure about what to buy.
+                        Simply fill out the form below with information about the recipient and your budget,
+                        and we'll suggest a curated list of gifts!
+                    </h3>
+                </div>
+                <form action="#">
+                    <h2>Gift Details</h2>
+                    <label for="Relationship">Relationship</label>
+                    <br>
+                    <input type="text" name="" id="">
+                    <br>
+                    <label for="Age">Age</label>
+                    <br>
+                    <input type="number" name="" id="">
+                    <br>
+                    <label for="Occasion">Occasion</label>
+                    <br>
+                    <input type="text">
+                    <br>
+                    <label for="Interest">Interests</label>
+                    <br>
+                    <input type="text" name="" id="">
+                    <br>
+                    <label for="budget">Budget</label>
+                    <br>
+                    <input type="number" name="" id="">
+                    <br>
+                    <div class="giftBtn">
+                        <button type="submit">
+                            <i class="fa-solid fa-gift"></i>
+                            Generate Gift
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <template id="dropclone">
+        <div class="catmain">
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle" style="overflow: hidden;">
+                        <img src="https://source.unsplash.com/500x300/?product" alt=""
+                            style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script>
+        let catagories = document.querySelector('.catagories')
+        let drop = document.querySelector('.dropDown')
+
+        catagories.addEventListener('click', () => {
+            drop.classList.toggle('none')
+        })
+
+        let dropDown = document.querySelector('.dropDown')
+        let dropclone = document.querySelector('#dropclone')
+        for (let j = 0; j < 4; j++) {
+            const drop = dropclone.content.cloneNode(true)
+            dropDown.appendChild(drop)
+        }
+        const sideMenu = () => {
+            let hamburger = document.querySelector('.hamburger')
+            let navSide = document.querySelector('.navSide')
+            let close = document.querySelector('.close')
+
+            hamburger.addEventListener('click', () => {
+                navSide.classList.toggle('none2')
+
+            })
+            close.addEventListener('click', () => {
+                navSide.classList.toggle('none2')
+
+            })
+        }
+
+        sideMenu()
+    </script>
+</body>
+
+</html>

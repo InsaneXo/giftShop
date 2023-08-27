@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: #D9D9D9;
+}
+
+#main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 68px;
+    background-color: #2d6cdf;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo h1 {
+    font-weight: 400;
+}
+
+.logo i {
+    font-size: 36px;
+}
+
+.navlist ul {
+    display: flex;
+    gap: 2px;
+}
+
+.navlist li {
+    list-style: none;
+    height: 31px;
+    width: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.navLogo i {
+    font-size: 25px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    margin: 73px 0 0 0;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.mySlides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    font-size: 38px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: blue;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+.heading h1 {
+    font-weight: 300;
+}
+
+.dropDown {
+    position: absolute;
+    height: 321px;
+    width: 36%;
+    background-color: #352F44;
+    top: 100%;
+    left: 51%;
+    transition: all 0.3s ease;
+    display: flex;
+    overflow: scroll;
+    gap: 6px;
+    padding: 0 8px;
+}
+
+
+.catCircle {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.none {
+    display: none;
+}
+
+
+
+
+
+/* All section */
+
+.all-sec {
+    position: relative;
+    width: 98%;
+    left: 10px;
+    overflow: hidden;
+    padding: 0 6px;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 183px;
+    height: 60px;
+    flex-wrap: wrap;
+}
+
+.subCat {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.catTitle p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.catTitle p:hover {
+    font-weight: bolder;
+}
+
+.hamburger{
+    display: none;
+}
+
+.navSide{
+    display: none;
+}
+
+/* Catagories */
+
+.catagories {
+    position: relative;
+    height: 400px;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+
+.head h1 {
+    font-weight: 400;
+}
+
+.imgbox {
+    display: flex;
+    position: absolute;
+    gap: 13px;
+}
+
+.box {
+    height: 352px;
+    width: 293px;
+    background-color: #46c3db;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
+/* Popular Gifts */
+
+.imgbox2 {
+    display: flex;
+    position: absolute;
+    gap: 13px;
+    overflow: hidden;
+}
+
+.popularGift {
+    position: relative;
+    height: 475px;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.card {
+    width: 325px;
+    background-color: #46c3db;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 460px;
+}
+
+.giftImg {
+    height: 220px;
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    gap: 19px;
+    align-items: center;
+    color: white;
+}
+
+.rating h2 {
+    font-weight: 400;
+}
+
+.review {
+    gap: 12px;
+    align-items: center;
+    color: white;
+}
+
+.review h2 {
+    font-weight: 400;
+}
+
+.price {
+    gap: 19px;
+    align-items: center;
+    color: white;
+}
+
+.price h2 {
+    font-weight: 400;
+}
+
+.color {
+    gap: 28px;
+    color: white;
+}
+
+.color h2 {
+    font-weight: 400;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 -4px;
+}
+
+.proDetail h2 {
+    font-weight: 300;
+    color: white;
+    font-size: 25px;
+}
+
+.proDetail i {
+    color: yellow;
+}
+
+.star {
+    gap: 5px;
+}
+
+.smile {
+    gap: 5px;
+}
+
+.drop {
+    gap: 4px
+}
+
+.proDetail {
+    padding-left: 11px;
+    padding-top: 10px;
+}
+
+.cardbtn {
+    display: flex;
+    padding: 0 8px;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    gap: 22px;
+}
+
+
+.cardbtn button {
+    padding: 13px 11px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+}
+
+/* Nav 2 */
+
+.imgbox3 {
+    display: flex;
+    position: absolute;
+    gap: 13px;
+}
+
+.box2 {
+    height: 352px;
+    width: 293px;
+    background-color: #46c3db;
+    border-radius: 10px;
+}
+
+.cat1 {
+    display: none;
+    animation: moving .5s ease;
+
+}
+
+.box2 {
+    overflow: hidden;
+}
+
+.box2 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cat1.blue {
+    display: flex;
+    position: relative;
+    gap: 14px;
+}
+
+.nav2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav2 ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blue {
+    background-color: blue;
+    border: 3px solid white;
+    color: white;
+}
+
+.nav2 li {
+    height: 37px;
+    width: 131px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav2 li:hover {
+    background-color: blue;
+    border: 3px solid white;
+    color: white;
+}
+
+.moreBtn button {
+    padding: 12px 13px;
+    background: blue;
+    color: white;
+    border: 3px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.aiCurated {
+    width: 100%;
+    position: relative;
+}
+
+.aiImg {
+    margin: auto;
+}
+
+.aiImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aiCuratedHead {
+    position: absolute;
+    top: 23px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
+
+.aiCuratedHead h1 {
+    font-size: 54px;
+    letter-spacing: 6px;
+}
+
+.aiCuratedHead h3 {
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+
+.aiCuratedBtn {
+    position: absolute;
+    bottom: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aiCuratedBtn i {
+    font-size: 22px;
+}
+
+.aiCuratedBtn button {
+    padding: 14px 39px;
+    background: blue;
+    border: 3px solid white;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.allBlog {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+}
+
+.blog {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+}
+
+.blogBox {
+    background-color: #46c3db;
+    height: 450px;
+    width: 377px;
+    border: 3px solid white;
+    border-radius: 9px;
+    overflow: hidden;
+    color: white;
+}
+
+.blogImg {
+    width: 100%;
+    height: 212px;
+    background-color: antiquewhite;
+}
+
+.blogTitle {
+    padding: 2px 6px;
+}
+
+.blogPara {
+    height: 106px;
+    width: 324px;
+    overflow: hidden;
+}
+
+.blogBtn {
+    text-align: center;
+    margin-top: 32px;
+}
+
+
+
+.blogBtn button {
+    padding: 13px 19px;
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #352F44;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 19px;
+    align-items: center;
+    height: 100%;
+}
+
+.hero ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero li {
+    list-style: none;
+}
+
+.heroBox {
+    height: 299px;
+    width: 263px;
+    padding: 4px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.socialLogo {
+    display: flex;
+    gap: 4px;
+}
+
+
+.socialLogo i {
+    background-color: skyblue;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    border: 2px solid white;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.socialLogo i:hover {
+    rotate: 360deg;
+    scale: 1.2;
+    filter: drop-shadow(1px 1px 5px);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 400;
+    padding-bottom: 11px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

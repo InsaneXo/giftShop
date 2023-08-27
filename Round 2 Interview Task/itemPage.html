@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Static/style.css">
+    <link rel="stylesheet" href="Static/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Catagories</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .itemContainer {
+        width: 95%;
+        margin: 70px auto 17px auto;
+    }
+
+    .filterBtn {
+        padding: 9px 36px;
+        background-color: blue;
+        border: 3px solid white;
+        color: white;
+    }
+
+    .itemBox {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        margin-top: 17px;
+    }
+
+    .sidebar {
+        background-color: #352F44;
+        height: 100vh;
+        width: 324px;
+        position: absolute;
+        left: 0;
+        top: 68px;
+    }
+
+    .sideNav {
+        justify-content: space-between;
+        padding: 8px 9px;
+    }
+
+    .option2 {
+        height: 135px;
+        width: 100%;
+        margin-top: 48px;
+        border-bottom: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .option3 {
+        height: 311px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        padding: 19px 0;
+    }
+
+    .option3 input {
+        height: 25px;
+        width: 31px;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+    }
+
+    .sideNav h2 {
+        font-weight: 300;
+    }
+
+    .sideTitle {
+        gap: 7px;
+    }
+
+    .option {
+        justify-content: space-between;
+    }
+
+    .option i {
+        font-size: 23px;
+    }
+
+    .sideBarControl {
+        justify-content: space-around;
+        margin-top: 24px;
+    }
+
+    .sideBarControl button {
+        background-color: blue;
+        color: white;
+        padding: 12px 37px;
+        border: 2px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 854px) {
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .none2 {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-gift"></i>
+                <h1>Gift Shop</h1>
+            </div>
+            <div class="navItem">
+                <div class="navlist">
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="aiCurated.html">
+                            <li>AI Curated</li>
+                        </a>
+                        <li class="catagories">Catagories <i class="fa-solid fa-chevron-down"></i></li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+                <div class="navLogo">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i class="fa-solid fa-bars hamburger"></i>
+                </div>
+                <div class="dropDown none">
+                </div>
+                <div class="sidebar none">
+                    <div class="sideNav ">
+                        <div class="option flex">
+                            <div class="sideTitle flex">
+                                <i class="fa-solid fa-sliders"></i>
+                                <h2>Filters By</h2>
+                            </div>
+                            <div class="close">
+                                <i class="fa-solid fa-xmark close"></i>
+                            </div>
+                        </div>
+                        <div class="option2">
+                            <h2>Features</h2>
+                            <h2>Price</h2>
+                            <h2>Color</h2>
+                        </div>
+                        <div class="option3">
+                            <div class="list">
+                                <input type="checkbox" value="Black"><label for="Black">Black (34)</label>
+                            </div>
+                            <div class="list">
+                                <input type="checkbox" value="Blue"><label for="Blue">Blue (23)</label>
+                            </div>
+                            <div class="list">
+                                <input type="checkbox" value="Green"><label for="Green">Green (10)</label>
+                            </div>
+                            <div class="list">
+                                <input type="checkbox" value="Orange"><label for="Orange">Orange (4)</label>
+                            </div>
+                            <div class="list">
+                                <input type="checkbox" value="Pink"><label for="Pink">Pink (6)</label>
+                            </div>
+                            <div class="list">
+                                <input type="checkbox" value="White"><label for="White">White (23)</label>
+                            </div>
+                        </div>
+                        <div class="sideBarControl flex">
+                            <button>
+                                <i class="fa-solid fa-trash"></i>
+                                Clear
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-check"></i>
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navSide none2">
+                    <div class="navTitle">
+                        <h2>Menu</h2>
+                        <i class="fa-solid fa-xmark close2" style="cursor: pointer; font-size: 26px;"></i>
+                    </div>
+                    <div class="navMenu ">
+                        <ul>
+                            <a href="index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="aiCurated.html">
+                                <li>AI Curated</li>
+                            </a>
+                            <a href="itemPage.html">
+                                <li>Catagories</li>
+                            </a>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="itemContainer">
+            <div class="itemHeading">
+                <h1>Category Name</h1>
+            </div>
+            <button class="filterBtn">
+                <i class="fa-solid fa-sliders"></i>
+                Filter
+            </button>
+            <div class="itemBox">
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="hero">
+                <div class="heroBox">
+                    <h1>About Us</h1>
+                    <p>Our Gift Shop one of the kind <br>
+                        of Dealing With a variety of <br>Catagories to make Special.</p>
+                    <div class="socialLogo">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </div>
+                </div>
+                <div class="heroBox">
+                    <h1>Quick Link</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Privacy</li>
+                        <li>Term</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="heroBox">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li>Location :</li>
+                        <li>Email :</li>
+                        <li>Phone No. :</li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="copyright">&copy; 2017-2023 Company Name</h3>
+        </div>
+    </div>
+    <template id="itemList">
+        <div class="card">
+            <div class="giftImg">
+                <img src="https://source.unsplash.com/500x300/?product" alt="">
+            </div>
+            <div class="proDetail">
+                <h2>Product Name</h2>
+                <div class="rating flex">
+                    <h2>Rating</h2>
+                    <div class="star flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p>4.5</p>
+                    </div>
+                </div>
+                <div class="review flex">
+                    <h2>Review</h2>
+                    <div class="smile flex">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <p>1,000</p>
+                    </div>
+                </div>
+                <div class="color flex">
+                    <h2>Color</h2>
+                    <div class="round flex">
+                        <div class="circle" style="background-color: aqua;"></div>
+                        <div class="circle" style="background-color: orange;"></div>
+                        <div class="circle" style="background-color: blue;"></div>
+                    </div>
+                </div>
+                <div class="price flex">
+                    <h2>Price</h2>
+                    <div class="drop flex">
+                        <p>₹1,800 <span style="text-decoration-line: line-through; color: #ab7b7b;">₹2,000</span>
+                        </p>
+                        <p style="color: pink;
+                    font-size: 13px;">10%off</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardbtn" style="position: relative; margin-top: 16px;">
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Buy Now</span>
+                </button>
+                <button>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Add to Cart</span>
+                </button>
+                <button style="height: 50px;
+            width: 50px;
+            border-radius: 50%;">
+                    <i class="fa-solid fa-share"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+    <template id="dropclone">
+        <div class="catmain">
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle" style="overflow: hidden;">
+                        <img src="https://source.unsplash.com/500x300/?product" alt=""
+                            style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="subCat">
+                    <div class="catCircle">
+                        <div class="catCircle" style="overflow: hidden;">
+                            <img src="https://source.unsplash.com/500x300/?product" alt=""
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="catTitle">
+                        <a href="itemPage.html">
+                            <p>Product Name
+                                <p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        let template = document.querySelector('#itemList')
+        let card = document.querySelector('.itemBox')
+        let catagories = document.querySelector('.catagories')
+        let drop = document.querySelector('.dropDown')
+        let dropDown = document.querySelector('.dropDown')
+        let dropclone = document.querySelector('#dropclone')
+        let filterBtn = document.querySelector('.filterBtn')
+        let sidebar = document.querySelector('.sidebar')
+        let close = document.querySelector('.close')
+
+        catagories.addEventListener('click', () => {
+            drop.classList.toggle('none')
+        })
+        for (let j = 0; j < 4; j++) {
+            const drop = dropclone.content.cloneNode(true)
+            dropDown.appendChild(drop)
+        }
+
+        for (i = 0; i < 80; i++) {
+            const cardClone = template.content.cloneNode(true);
+            card.appendChild(cardClone)
+        }
+
+        filterBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('none')
+        })
+        close.addEventListener('click', () => {
+            sidebar.classList.toggle('none')
+        })
+        const sideMenu = () => {
+            let hamburger = document.querySelector('.hamburger')
+            let navSide = document.querySelector('.navSide')
+            let close = document.querySelector('.close2')
+
+            hamburger.addEventListener('click', () => {
+                navSide.classList.toggle('none2')
+
+            })
+            close.addEventListener('click', () => {
+                navSide.classList.toggle('none2')
+
+            })
+        }
+
+        sideMenu()
+    </script>
+</body>
+
+</html>
